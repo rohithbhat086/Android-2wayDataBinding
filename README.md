@@ -32,7 +32,7 @@ Directly call viewmodel's functions from xml
             ...
 ```            
 
-Hook the view contect to the livedata
+Hook the view content to the livedata
 ```
         <TextView
             android:id="@+id/result"
@@ -41,4 +41,4 @@ Hook the view contect to the livedata
             android:text="@{`SUM: `+String.valueOf(vm.sumData)}"
 ```
 
-Make sure to add ```mBinding.lifecycleOwner = this``` to enable the livedata updates in your layout.
+Make sure to add ```mBinding.lifecycleOwner = this``` in the activity, so that data binder can use the activity to observe live data updates, and update the view content
